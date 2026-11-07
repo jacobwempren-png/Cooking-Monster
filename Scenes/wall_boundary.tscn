@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cu717k44i003w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yih1u"]
+size = Vector2(16, 16)
+
+[node name="WallBoundary" type="StaticBody2D" unique_id=1670327893]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1568234549]
+shape = SubResource("RectangleShape2D_yih1u")

@@ -1,94 +1,338 @@
 [gd_scene format=3 uid="uid://brod62vjik7kn"]
 
-[ext_resource type="PackedScene" uid="uid://botvmxrk8g7ms" path="res://Scenes/Player.tscn" id="1_ebmjs"]
-[ext_resource type="Texture2D" uid="uid://pavoaw7vmce1" path="res://Assets/TavernAssets/Walls_interior.png" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://botvmxrk8g7ms" path="res://Scenes/Player.tscn" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://b56f1iguob54k" path="res://Scenes/the_tavern.tscn" id="1_wowpa"]
+[ext_resource type="PackedScene" uid="uid://cu717k44i003w" path="res://Scenes/wall_boundary.tscn" id="3_wrm1d"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
-texture = ExtResource("1_qxrlw")
-3:0/size_in_atlas = Vector2i(7, 1)
-3:0/0 = 0
-8:15/size_in_atlas = Vector2i(2, 3)
-8:15/0 = 0
-0:12/size_in_atlas = Vector2i(1, 3)
-0:12/0 = 0
-1:12/size_in_atlas = Vector2i(1, 3)
-1:12/0 = 0
-2:12/size_in_atlas = Vector2i(1, 3)
-2:12/0 = 0
-3:12/size_in_atlas = Vector2i(1, 3)
-3:12/0 = 0
-4:12/size_in_atlas = Vector2i(1, 3)
-4:12/0 = 0
-6:12/size_in_atlas = Vector2i(1, 3)
-6:12/0 = 0
-8:12/size_in_atlas = Vector2i(1, 3)
-8:12/0 = 0
-7:12/size_in_atlas = Vector2i(1, 3)
-7:12/0 = 0
-5:12/size_in_atlas = Vector2i(1, 3)
-5:12/0 = 0
-9:12/size_in_atlas = Vector2i(1, 3)
-9:12/0 = 0
-0:9/size_in_atlas = Vector2i(1, 3)
-0:9/0 = 0
-1:9/size_in_atlas = Vector2i(1, 3)
-1:9/0 = 0
-2:9/size_in_atlas = Vector2i(1, 3)
-2:9/0 = 0
-3:9/size_in_atlas = Vector2i(1, 3)
-3:9/0 = 0
-4:9/size_in_atlas = Vector2i(1, 3)
-4:9/0 = 0
-5:9/size_in_atlas = Vector2i(1, 3)
-5:9/0 = 0
-6:9/size_in_atlas = Vector2i(1, 3)
-6:9/0 = 0
-7:11/0 = 0
-7:10/0 = 0
-7:9/0 = 0
-8:9/size_in_atlas = Vector2i(1, 3)
-8:9/0 = 0
-9:9/size_in_atlas = Vector2i(1, 3)
-9:9/0 = 0
-0:6/size_in_atlas = Vector2i(2, 3)
-0:6/0 = 0
-0:0/size_in_atlas = Vector2i(3, 5)
-0:0/0 = 0
-3:1/size_in_atlas = Vector2i(2, 4)
-3:1/0 = 0
-6:1/size_in_atlas = Vector2i(2, 4)
-6:1/0 = 0
-8:1/size_in_atlas = Vector2i(2, 4)
-8:1/0 = 0
-8:5/size_in_atlas = Vector2i(2, 4)
-8:5/0 = 0
-6:5/size_in_atlas = Vector2i(2, 4)
-6:5/0 = 0
-3:5/size_in_atlas = Vector2i(2, 4)
-3:5/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-2:16/0 = 0
-2:17/0 = 0
-1:17/0 = 0
-0:17/0 = 0
-0:16/0 = 0
-4:16/0 = 0
-3:16/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-5:15/size_in_atlas = Vector2i(3, 2)
-5:15/0 = 0
+[node name="Game" type="Node2D" unique_id=1252147069]
 
-[sub_resource type="TileSet" id="TileSet_yih1u"]
-sources/0 = SubResource("TileSetAtlasSource_wrm1d")
+[node name="TheTavern" parent="." unique_id=747420958 instance=ExtResource("1_wowpa")]
 
-[node name="Game" type="Node2D" unique_id=1762615259]
+[node name="Player" parent="." unique_id=777431018 instance=ExtResource("1_qxrlw")]
+position = Vector2(0, 1)
 
-[node name="TileMap" type="TileMap" parent="." unique_id=1193569861]
-tile_set = SubResource("TileSet_yih1u")
-format = 2
-layer_0/tile_data = PackedInt32Array(0, 196608, 0, -65536, 196608, 0, -131072, 196608, 0, -196608, 196608, 0, -262144, 196608, 0, -327680, 196608, 0, -393216, 196608, 0, -327687, 196608, 0, -262151, 196608, 0, -196615, 196608, 0, -131079, 196608, 0, -65543, 196608, 0, -7, 196608, 0, 65529, 196608, 0, 131065, 196608, 0, 196601, 196608, 0, 262137, 196608, 0, 327673, 196608, 0, 393209, 196608, 0, 458745, 196608, 0, 524281, 196608, 0, 589817, 196608, 0, 655353, 196608, 0, 720889, 196608, 0, 786425, 196608, 0, 851961, 196608, 0, 917497, 196608, 0, 983033, 196608, 0, 917504, 196608, 0, 851968, 196608, 0, 786432, 196608, 0, 720896, 196608, 0, 655360, 196608, 0, 589824, 196608, 0, 524288, 196608, 0, 458752, 196608, 0, 393216, 196608, 0, 327680, 196608, 0, 262144, 196608, 0, 262151, 196608, 0, 327687, 196608, 0, 393223, 196608, 0, 458759, 196608, 0, 524295, 196608, 0, 589831, 196608, 0, 655367, 196608, 0, 655366, 196608, 0, 720902, 196608, 0, 720903, 196608, 0, 786439, 196608, 0, 851975, 196608, 0, 917511, 196608, 0, 196608, 196608, 0, 131072, 196608, 0, 65536, 196608, 0, 196615, 196608, 0, 131079, 196608, 0, 65543, 196608, 0, 7, 196608, 0, -65529, 196608, 0, -131065, 196608, 0, -196601, 196608, 0, -262137, 196608, 0, -327673, 196608, 0, -393209, 196608, 0)
+[node name="Boundaries" type="Node" parent="." unique_id=1920042840]
 
-[node name="Player" parent="." unique_id=777431018 instance=ExtResource("1_ebmjs")]
+[node name="WallBoundary" parent="Boundaries" unique_id=1670327893 instance=ExtResource("3_wrm1d")]
+position = Vector2(-24, 230)
+
+[node name="WallBoundary2" parent="Boundaries" unique_id=1695408308 instance=ExtResource("3_wrm1d")]
+position = Vector2(-8, 230)
+
+[node name="WallBoundary3" parent="Boundaries" unique_id=1583473078 instance=ExtResource("3_wrm1d")]
+position = Vector2(8, 230)
+
+[node name="WallBoundary4" parent="Boundaries" unique_id=116144935 instance=ExtResource("3_wrm1d")]
+position = Vector2(24, 230)
+
+[node name="WallBoundary5" parent="Boundaries" unique_id=1264855075 instance=ExtResource("3_wrm1d")]
+position = Vector2(40, 230)
+
+[node name="WallBoundary6" parent="Boundaries" unique_id=2058037728 instance=ExtResource("3_wrm1d")]
+position = Vector2(56, 230)
+
+[node name="WallBoundary7" parent="Boundaries" unique_id=827778589 instance=ExtResource("3_wrm1d")]
+position = Vector2(67, 214)
+
+[node name="WallBoundary8" parent="Boundaries" unique_id=164788504 instance=ExtResource("3_wrm1d")]
+position = Vector2(83, 214)
+
+[node name="WallBoundary9" parent="Boundaries" unique_id=1040748321 instance=ExtResource("3_wrm1d")]
+position = Vector2(99, 214)
+
+[node name="WallBoundary10" parent="Boundaries" unique_id=1057759269 instance=ExtResource("3_wrm1d")]
+position = Vector2(115, 214)
+
+[node name="WallBoundary11" parent="Boundaries" unique_id=601106727 instance=ExtResource("3_wrm1d")]
+position = Vector2(131, 214)
+
+[node name="WallBoundary12" parent="Boundaries" unique_id=1735110318 instance=ExtResource("3_wrm1d")]
+position = Vector2(147, 198)
+
+[node name="WallBoundary13" parent="Boundaries" unique_id=391179548 instance=ExtResource("3_wrm1d")]
+position = Vector2(163, 198)
+
+[node name="WallBoundary14" parent="Boundaries" unique_id=455918978 instance=ExtResource("3_wrm1d")]
+position = Vector2(179, 198)
+
+[node name="WallBoundary15" parent="Boundaries" unique_id=2140517144 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, 182)
+
+[node name="WallBoundary16" parent="Boundaries" unique_id=192426578 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, 166)
+
+[node name="WallBoundary17" parent="Boundaries" unique_id=304264542 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, 150)
+
+[node name="WallBoundary18" parent="Boundaries" unique_id=512983308 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, 134)
+
+[node name="WallBoundary19" parent="Boundaries" unique_id=623667745 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, 118)
+
+[node name="WallBoundary20" parent="Boundaries" unique_id=999177241 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, 102)
+
+[node name="WallBoundary21" parent="Boundaries" unique_id=1956868834 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, 86)
+
+[node name="WallBoundary22" parent="Boundaries" unique_id=1779274704 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, 70)
+
+[node name="WallBoundary23" parent="Boundaries" unique_id=1369582038 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, 54)
+
+[node name="WallBoundary24" parent="Boundaries" unique_id=1936383421 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, 38)
+
+[node name="WallBoundary25" parent="Boundaries" unique_id=2066019143 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, 22)
+
+[node name="WallBoundary26" parent="Boundaries" unique_id=1000143726 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, 6)
+
+[node name="WallBoundary27" parent="Boundaries" unique_id=807343397 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, -10)
+
+[node name="WallBoundary28" parent="Boundaries" unique_id=168588193 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, -26)
+
+[node name="WallBoundary29" parent="Boundaries" unique_id=1473776112 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, -42)
+
+[node name="WallBoundary30" parent="Boundaries" unique_id=1205346700 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, -42)
+
+[node name="WallBoundary31" parent="Boundaries" unique_id=1195595231 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, -58)
+
+[node name="WallBoundary32" parent="Boundaries" unique_id=990285751 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, -74)
+
+[node name="WallBoundary33" parent="Boundaries" unique_id=1966523750 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, -90)
+
+[node name="WallBoundary34" parent="Boundaries" unique_id=13907178 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, -106)
+
+[node name="WallBoundary35" parent="Boundaries" unique_id=703831129 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, -122)
+
+[node name="WallBoundary36" parent="Boundaries" unique_id=1693196427 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, -122)
+
+[node name="WallBoundary37" parent="Boundaries" unique_id=166481728 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, -138)
+
+[node name="WallBoundary38" parent="Boundaries" unique_id=513640274 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, -154)
+
+[node name="WallBoundary39" parent="Boundaries" unique_id=1248270840 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, -170)
+
+[node name="WallBoundary40" parent="Boundaries" unique_id=1758753561 instance=ExtResource("3_wrm1d")]
+position = Vector2(179, -170)
+
+[node name="WallBoundary41" parent="Boundaries" unique_id=2051662679 instance=ExtResource("3_wrm1d")]
+position = Vector2(163, -170)
+
+[node name="WallBoundary42" parent="Boundaries" unique_id=207872276 instance=ExtResource("3_wrm1d")]
+position = Vector2(147, -170)
+
+[node name="WallBoundary43" parent="Boundaries" unique_id=1349978782 instance=ExtResource("3_wrm1d")]
+position = Vector2(131, -186)
+
+[node name="WallBoundary44" parent="Boundaries" unique_id=610639384 instance=ExtResource("3_wrm1d")]
+position = Vector2(115, -186)
+
+[node name="WallBoundary45" parent="Boundaries" unique_id=1529050960 instance=ExtResource("3_wrm1d")]
+position = Vector2(99, -186)
+
+[node name="WallBoundary46" parent="Boundaries" unique_id=297566660 instance=ExtResource("3_wrm1d")]
+position = Vector2(227, 70)
+
+[node name="WallBoundary47" parent="Boundaries" unique_id=826125321 instance=ExtResource("3_wrm1d")]
+position = Vector2(211, 150)
+
+[node name="WallBoundary48" parent="Boundaries" unique_id=209283974 instance=ExtResource("3_wrm1d")]
+position = Vector2(72, 230)
+
+[node name="WallBoundary49" parent="Boundaries" unique_id=1129284239 instance=ExtResource("3_wrm1d")]
+position = Vector2(147, 214)
+
+[node name="WallBoundary50" parent="Boundaries" unique_id=847113801 instance=ExtResource("3_wrm1d")]
+position = Vector2(-40, 230)
+
+[node name="WallBoundary51" parent="Boundaries" unique_id=1955493573 instance=ExtResource("3_wrm1d")]
+position = Vector2(-56, 230)
+
+[node name="WallBoundary52" parent="Boundaries" unique_id=1852696538 instance=ExtResource("3_wrm1d")]
+position = Vector2(-72, 230)
+
+[node name="WallBoundary53" parent="Boundaries" unique_id=973847128 instance=ExtResource("3_wrm1d")]
+position = Vector2(-67, 214)
+
+[node name="WallBoundary54" parent="Boundaries" unique_id=1688380621 instance=ExtResource("3_wrm1d")]
+position = Vector2(-83, 214)
+
+[node name="WallBoundary55" parent="Boundaries" unique_id=111026230 instance=ExtResource("3_wrm1d")]
+position = Vector2(-99, 214)
+
+[node name="WallBoundary56" parent="Boundaries" unique_id=1199501146 instance=ExtResource("3_wrm1d")]
+position = Vector2(-115, 214)
+
+[node name="WallBoundary57" parent="Boundaries" unique_id=1043797890 instance=ExtResource("3_wrm1d")]
+position = Vector2(-131, 214)
+
+[node name="WallBoundary58" parent="Boundaries" unique_id=956565629 instance=ExtResource("3_wrm1d")]
+position = Vector2(-147, 214)
+
+[node name="WallBoundary59" parent="Boundaries" unique_id=1379996301 instance=ExtResource("3_wrm1d")]
+position = Vector2(-147, 198)
+
+[node name="WallBoundary60" parent="Boundaries" unique_id=1586007320 instance=ExtResource("3_wrm1d")]
+position = Vector2(-163, 198)
+
+[node name="WallBoundary61" parent="Boundaries" unique_id=1138532395 instance=ExtResource("3_wrm1d")]
+position = Vector2(-179, 198)
+
+[node name="WallBoundary62" parent="Boundaries" unique_id=1403681 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, 198)
+
+[node name="WallBoundary63" parent="Boundaries" unique_id=285460610 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, 182)
+
+[node name="WallBoundary64" parent="Boundaries" unique_id=1908693448 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, 166)
+
+[node name="WallBoundary65" parent="Boundaries" unique_id=81153640 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, 150)
+
+[node name="WallBoundary66" parent="Boundaries" unique_id=280328197 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, 150)
+
+[node name="WallBoundary67" parent="Boundaries" unique_id=274417915 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, 134)
+
+[node name="WallBoundary68" parent="Boundaries" unique_id=644132457 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, 118)
+
+[node name="WallBoundary69" parent="Boundaries" unique_id=1937324966 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, 102)
+
+[node name="WallBoundary70" parent="Boundaries" unique_id=527000691 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, 86)
+
+[node name="WallBoundary71" parent="Boundaries" unique_id=742686073 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, 70)
+
+[node name="WallBoundary72" parent="Boundaries" unique_id=1891976144 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, 70)
+
+[node name="WallBoundary73" parent="Boundaries" unique_id=450482666 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, 54)
+
+[node name="WallBoundary74" parent="Boundaries" unique_id=1646137483 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, 38)
+
+[node name="WallBoundary75" parent="Boundaries" unique_id=1473504194 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, 22)
+
+[node name="WallBoundary76" parent="Boundaries" unique_id=1532075308 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, 6)
+
+[node name="WallBoundary77" parent="Boundaries" unique_id=409426565 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, -10)
+
+[node name="WallBoundary78" parent="Boundaries" unique_id=482624870 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, -26)
+
+[node name="WallBoundary79" parent="Boundaries" unique_id=1900655147 instance=ExtResource("3_wrm1d")]
+position = Vector2(-227, -42)
+
+[node name="WallBoundary80" parent="Boundaries" unique_id=1123616612 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, -42)
+
+[node name="WallBoundary81" parent="Boundaries" unique_id=1532394043 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, -58)
+
+[node name="WallBoundary82" parent="Boundaries" unique_id=642346304 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, -74)
+
+[node name="WallBoundary83" parent="Boundaries" unique_id=689925607 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, -90)
+
+[node name="WallBoundary84" parent="Boundaries" unique_id=1949820433 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, -106)
+
+[node name="WallBoundary85" parent="Boundaries" unique_id=2135134324 instance=ExtResource("3_wrm1d")]
+position = Vector2(-211, -122)
+
+[node name="WallBoundary86" parent="Boundaries" unique_id=1115615805 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, -122)
+
+[node name="WallBoundary87" parent="Boundaries" unique_id=263520180 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, -138)
+
+[node name="WallBoundary88" parent="Boundaries" unique_id=449286265 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, -154)
+
+[node name="WallBoundary89" parent="Boundaries" unique_id=335283113 instance=ExtResource("3_wrm1d")]
+position = Vector2(-195, -170)
+
+[node name="WallBoundary90" parent="Boundaries" unique_id=538587474 instance=ExtResource("3_wrm1d")]
+position = Vector2(-179, -170)
+
+[node name="WallBoundary91" parent="Boundaries" unique_id=726442543 instance=ExtResource("3_wrm1d")]
+position = Vector2(-163, -170)
+
+[node name="WallBoundary92" parent="Boundaries" unique_id=1022251898 instance=ExtResource("3_wrm1d")]
+position = Vector2(-147, -170)
+
+[node name="WallBoundary93" parent="Boundaries" unique_id=1979532022 instance=ExtResource("3_wrm1d")]
+position = Vector2(-131, -186)
+
+[node name="WallBoundary94" parent="Boundaries" unique_id=1794854912 instance=ExtResource("3_wrm1d")]
+position = Vector2(-115, -186)
+
+[node name="WallBoundary95" parent="Boundaries" unique_id=17444728 instance=ExtResource("3_wrm1d")]
+position = Vector2(-99, -186)
+
+[node name="WallBoundary96" parent="Boundaries" unique_id=1696708451 instance=ExtResource("3_wrm1d")]
+position = Vector2(-83, -186)
+
+[node name="WallBoundary97" parent="Boundaries" unique_id=693636249 instance=ExtResource("3_wrm1d")]
+position = Vector2(83, -186)
+
+[node name="WallBoundary98" parent="Boundaries" unique_id=2113969614 instance=ExtResource("3_wrm1d")]
+position = Vector2(-67, -186)
+
+[node name="WallBoundary99" parent="Boundaries" unique_id=1283017295 instance=ExtResource("3_wrm1d")]
+position = Vector2(67, -186)
+
+[node name="WallBoundary100" parent="Boundaries" unique_id=724719931 instance=ExtResource("3_wrm1d")]
+position = Vector2(-56, -202)
+
+[node name="WallBoundary101" parent="Boundaries" unique_id=449637327 instance=ExtResource("3_wrm1d")]
+position = Vector2(56, -202)
+
+[node name="WallBoundary102" parent="Boundaries" unique_id=49096325 instance=ExtResource("3_wrm1d")]
+position = Vector2(-40, -202)
+
+[node name="WallBoundary103" parent="Boundaries" unique_id=831421244 instance=ExtResource("3_wrm1d")]
+position = Vector2(-8, -202)
+
+[node name="WallBoundary104" parent="Boundaries" unique_id=1777679950 instance=ExtResource("3_wrm1d")]
+position = Vector2(-24, -202)
+
+[node name="WallBoundary105" parent="Boundaries" unique_id=1652111666 instance=ExtResource("3_wrm1d")]
+position = Vector2(40, -202)
+
+[node name="WallBoundary106" parent="Boundaries" unique_id=1551934100 instance=ExtResource("3_wrm1d")]
+position = Vector2(24, -202)
+
+[node name="WallBoundary107" parent="Boundaries" unique_id=1545189143 instance=ExtResource("3_wrm1d")]
+position = Vector2(8, -202)
+
+[node name="WallBoundary108" parent="Boundaries" unique_id=1588792458 instance=ExtResource("3_wrm1d")]
+position = Vector2(195, 198)

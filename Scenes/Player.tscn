@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://botvmxrk8g7ms"]
 
 [ext_resource type="Script" uid="uid://bvdovfondo2c0" path="res://Scripts/player.gd" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://bl4e6kde2xroh" path="res://Assets/PlayerSprite/MerlinIdleLeftRight.png" id="2_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://4mw84nuyljny" path="res://Assets/PlayerSprite/MerlinIdleLeftRight.png" id="2_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://c1e5m6ibmri1j" path="res://Assets/PlayerSprite/MerlinWalkLeftRight.png" id="3_gntrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
@@ -141,6 +141,7 @@ texture_filter = 1
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_yih1u")
 animation = &"WalkLeftRight"
+frame_progress = 0.45199695
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357183920]
 position = Vector2(0, -14)
@@ -148,4 +149,4 @@ shape = SubResource("CapsuleShape2D_yih1u")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=856469653]
 position = Vector2(0, -21)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(4, 4)
