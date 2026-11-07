@@ -29,9 +29,7 @@ func _physics_process(delta: float) -> void:
 		
 	#Play Animations
 	if directionX == 0:
-		scale = Vector2(1,1)
 		animated_sprite.play("IdleLeftRight")
-		
 	else:
 		animated_sprite.play("WalkLeftRight")
 	
