@@ -6,9 +6,10 @@
 
 [node name="Game" type="Node2D" unique_id=1252147069]
 
-[node name="TheTavern" parent="." unique_id=747420958 instance=ExtResource("1_wowpa")]
-
 [node name="Player" parent="." unique_id=777431018 instance=ExtResource("1_qxrlw")]
+position = Vector2(0, 1)
+
+[node name="TheTavern" parent="." unique_id=747420958 instance=ExtResource("1_wowpa")]
 position = Vector2(0, 1)
 
 [node name="Boundaries" type="Node" parent="." unique_id=1920042840]
@@ -251,6 +252,7 @@ position = Vector2(-227, -26)
 position = Vector2(-227, -42)
 
 [node name="WallBoundary80" parent="Boundaries" unique_id=1123616612 instance=ExtResource("3_wrm1d")]
+z_index = 3
 position = Vector2(-211, -42)
 
 [node name="WallBoundary81" parent="Boundaries" unique_id=1532394043 instance=ExtResource("3_wrm1d")]
@@ -336,3 +338,27 @@ position = Vector2(8, -202)
 
 [node name="WallBoundary108" parent="Boundaries" unique_id=1588792458 instance=ExtResource("3_wrm1d")]
 position = Vector2(195, 198)
+
+[node name="WallBoundary109" parent="Boundaries" unique_id=790929506 instance=ExtResource("3_wrm1d")]
+z_index = 3
+position = Vector2(-194, -42)
+
+[node name="WallBoundary110" parent="Boundaries" unique_id=1306533363 instance=ExtResource("3_wrm1d")]
+z_index = 3
+position = Vector2(-177, -42)
+
+[node name="WallBoundary111" parent="Boundaries" unique_id=879081021 instance=ExtResource("3_wrm1d")]
+z_index = 3
+position = Vector2(-142, -42)
+
+[node name="WallBoundary112" parent="Boundaries" unique_id=1779919765 instance=ExtResource("3_wrm1d")]
+z_index = 3
+position = Vector2(-125, -42)
+
+[node name="WallBoundary113" parent="Boundaries" unique_id=888112910 instance=ExtResource("3_wrm1d")]
+z_index = 3
+position = Vector2(-108, -42)
+
+[node name="WallBoundary114" parent="Boundaries" unique_id=445550205 instance=ExtResource("3_wrm1d")]
+z_index = 3
+position = Vector2(-91, -42)
