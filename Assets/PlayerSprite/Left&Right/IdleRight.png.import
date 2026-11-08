@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1e5m6ibmri1j"
-path="res://.godot/imported/MerlinWalkLeftRight.png-65887605ed32d78e08c4f7d678ca1081.ctex"
+uid="uid://dbxko2p7ppvly"
+path="res://.godot/imported/IdleRight.png-239f94d69ae6161547bf4281e889cb2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PlayerSprite/MerlinWalkLeftRight.png"
-dest_files=["res://.godot/imported/MerlinWalkLeftRight.png-65887605ed32d78e08c4f7d678ca1081.ctex"]
+source_file="res://Assets/PlayerSprite/Left&Right/IdleRight.png"
+dest_files=["res://.godot/imported/IdleRight.png-239f94d69ae6161547bf4281e889cb2b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr8gfrbg4stow"
-path="res://.godot/imported/Wizard-Character-Animation-1024x64px.png-c02b91d57fca3bda08d9f7f1c98bf5d6.ctex"
+uid="uid://gnoc6gsuvhvm"
+path="res://.godot/imported/sprite-32x32px-4f-sheet.png-79dc4dff11ef0248a37a4aa4568ec025.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PlayerSprite/Wizard-Character-Animation-1024x64px.png"
-dest_files=["res://.godot/imported/Wizard-Character-Animation-1024x64px.png-c02b91d57fca3bda08d9f7f1c98bf5d6.ctex"]
+source_file="res://Assets/PlayerSprite/Down/sprite-32x32px-4f-sheet.png"
+dest_files=["res://.godot/imported/sprite-32x32px-4f-sheet.png-79dc4dff11ef0248a37a4aa4568ec025.ctex"]
 
 [params]
 

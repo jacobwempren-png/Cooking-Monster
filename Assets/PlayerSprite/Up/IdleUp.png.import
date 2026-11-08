@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4mw84nuyljny"
-path="res://.godot/imported/MerlinIdleLeftRight.png-5a4e2704068725adc530673028d83dbd.ctex"
+uid="uid://u4gqhypocaf3"
+path="res://.godot/imported/IdleUp.png-c08088c0720d2aa6b56ef63cbdba06cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PlayerSprite/MerlinIdleLeftRight.png"
-dest_files=["res://.godot/imported/MerlinIdleLeftRight.png-5a4e2704068725adc530673028d83dbd.ctex"]
+source_file="res://Assets/PlayerSprite/Up/IdleUp.png"
+dest_files=["res://.godot/imported/IdleUp.png-c08088c0720d2aa6b56ef63cbdba06cb.ctex"]
 
 [params]
 
