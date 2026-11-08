@@ -1,39 +1,40 @@
 extends CharacterBody2D
 
-
-const SPEEDX = 150.0
-const SPEEDY = 150.0
-
+@export var speed: float = 150.0
 @onready var animated_sprite = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	# Get the input direction and handle the movement/deceleration up and down.
-	var directionY = Input.get_axis("ui_up","ui_down")
-	if directionY:
-		velocity.y = directionY * SPEEDY
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEEDY)
+#Keep track of the last non-zero direction (default to down)
+var last_direction: Vector2 = Vector2.DOWN
 
-	# Get the input direction and handle the movement/deceleration left and right.
-	var directionX = Input.get_axis("ui_left", "ui_right")
-	if directionX:
-		velocity.x = directionX * SPEEDX
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEEDX)
+func _physics_process(delta: float) -> void:
+	#Get 2D input direction (returns a Vector2)
+	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
-	#Flip the player sprite
-	if directionX > 0:
-		animated_sprite.flip_h = false
-	elif directionX < 0:
-		animated_sprite.flip_h = true
+	if direction != Vector2.ZERO:
+		velocity = direction * speed
+		#Update tracking variable every time the player moves
+		last_direction = direction
 		
-	#Play Animations
-	if directionX == 0:
-		animated_sprite.play("IdleLeftRight")
+		#Check vertical vs horizontal dominance or direct y-axis
+		if direction.y < 0:
+			animated_sprite.play("WalkUp")
+		elif direction.y > 0:
+			animated_sprite.play("WalkDown")
+		elif direction.x < 0:
+			animated_sprite.play("WalkLeft")
+		elif direction.x > 0:
+			animated_sprite.play("WalkRight")
 	else:
-		animated_sprite.play("WalkLeftRight")
-	
+		velocity = Vector2.ZERO
+		
+		#Play idle animation based on the last recorded direction
+		if last_direction.y < 0:
+			animated_sprite.play("IdleUp")
+		elif last_direction.y > 0:
+			animated_sprite.play("IdleDown")
+		elif last_direction.x > 0:
+			animated_sprite.play("IdleRight")
+		elif last_direction.x < 0:
+			animated_sprite.play("IdleLeft")
 
 	move_and_slide()
-	if is_on_floor():
-		velocity.y = 0
